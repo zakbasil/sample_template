@@ -1,0 +1,29 @@
+{
+  "name": "product-showcase",
+  "version": "1.0.0",
+  "description": "Product showcase template demo made in bootstrap 4",
+  "main": "index.html",
+  "author": "Anton Zdanov <akumael@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "npm run start",
+    "start": "parcel ./src/index.html --open",
+    "deploy": "gh-pages -d dist",
+    "prebuild": "rimraf dist",
+    "build": "parcel build ./src/index.html --out-dir dist --public-url ./",
+    "format": "prettier --write src/**/*.{css,scss,js}"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.2.0",
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0",
+    "node-sass": "^4.9.2",
+    "parcel-bundler": "^1.9.7",
+    "rimraf": "^2.6.2"
+  }
+}

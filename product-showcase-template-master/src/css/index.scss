@@ -1,0 +1,227 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+$primary: #3292a6;
+$overlay: rgba(50, 146, 166, 0.8);
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin-top: 102px;
+}
+
+.input-group-text,
+.form-control,
+.btn {
+  border-radius: unset !important;
+}
+
+a {
+  color: $primary;
+
+  &:hover {
+    color: darken($primary, 4%);
+  }
+
+  &:active {
+    color: darken($primary, 6%) !important;
+  }
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: darken($primary, 2%);
+
+  &:hover {
+    background-color: darken($primary, 4%);
+    border-color: darken($primary, 6%);
+  }
+
+  &:active {
+    background-color: darken($primary, 6%) !important;
+    border-color: darken($primary, 8%) !important;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px rgba($primary, 0.6);
+  }
+}
+
+.card {
+  border-radius: 0;
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+.border-primary {
+  border-color: $primary !important;
+}
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.btn-link {
+  color: $primary !important;
+}
+
+.navbar {
+  box-shadow: 0 1px 0 $primary;
+  background: #fff;
+
+  .container {
+    min-height: 70px;
+  }
+
+  .navbar-brand {
+    .fa-circle {
+      color: $primary;
+    }
+
+    .logo {
+      display: none !important;
+    }
+
+    &:hover .fa-circle {
+      color: darken($primary, 5%);
+    }
+
+    @media screen and (min-width: 386px) {
+      .logo {
+        display: inline !important;
+        font-weight: 100;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .nav-item {
+    font-size: 1.4rem;
+    padding-right: 15px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+
+    &:hover {
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  .nav-link {
+    font-weight: 400;
+  }
+}
+
+.showcase {
+  position: relative;
+  background-size: cover;
+  background: url("../images/hero.jpeg") center;
+  min-height: 515px;
+
+  [class^="slogan"] {
+    font-size: 56px;
+  }
+
+  @media (min-width: 576px) {
+    min-height: 585px;
+
+    [class^="slogan"] {
+      font-size: 76px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    [class^="slogan"] {
+      font-size: 88px;
+    }
+  }
+
+  .primary-overlay {
+    position: absolute;
+    background: $overlay;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .btn-outline-light {
+    &:hover {
+      color: rgba(0, 0, 0, 0.9) !important;
+    }
+  }
+
+  .book {
+    max-width: 70% !important;
+  }
+}
+
+#newsletter {
+  .form-control {
+    border-radius: 0;
+  }
+}
+
+.about {
+  .info-header {
+    width: 100%;
+    margin: auto;
+
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
+  }
+}
+
+.authors {
+  .author-image {
+    margin-top: -35px;
+  }
+
+  .card-body {
+    transition: all 200ms;
+
+    .author-social,
+    .author-role {
+      transition: all 200ms;
+    }
+
+    .author-social {
+      padding-bottom: 10px;
+      border-bottom: 1px solid transparent;
+    }
+
+    &:hover,
+    &:focus-within {
+      background-color: $primary;
+      color: #fff;
+    }
+
+    &:hover .author-role,
+    &:focus-within .author-role {
+      color: #fff !important;
+    }
+    &:hover .author-social,
+    &:focus-within .author-social {
+      color: rgba(#fff, 0.9);
+
+      &:hover {
+        border-bottom: 1px solid #ddd;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.contact {
+  .fa-circle {
+    color: $primary;
+  }
+
+  .message {
+    height: 48px;
+  }
+}
